@@ -10,7 +10,7 @@
       "iconClass": "icon-nginx",
       "openshift.io/long-description": "This template defines resources needed to develop a static application served by Nginx HTTP server and a reverse proxy (nginx), including a build configuration and application deployment configuration.",
       "openshift.io/provider-display-name": "Red Hat, Inc.",
-      "openshift.io/documentation-url": "https://github.com/sclorg/nginx-ex",
+      "openshift.io/documentation-url": "https://github.com/monaliW/nginx-ex",
       "openshift.io/support-url": "https://access.redhat.com"
     }
   },
@@ -39,14 +39,7 @@
           "contextDir": "${CONTEXT_DIR}"
         },
         "strategy": {
-          "type": "Source",
-          "sourceStrategy": {
-            "from": {
-              "kind": "ImageStreamTag",
-              "namespace": "${NAMESPACE}",
-              "name": "nginx:${NGINX_VERSION}"
-            }
-          }
+          "type": "Docker"
         },
         "output": {
           "to": {
