@@ -8,4 +8,5 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80
 EXPOSE 443
 RUN chmod -R 755 /var/log/nginx
+USER root
 CMD ["nginx", "-g", "daemon off;"]
